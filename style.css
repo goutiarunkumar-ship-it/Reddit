@@ -1,0 +1,510 @@
+/* ============ RESET & VARIABLES ============ */
+:root {
+    --bg: #ffffff;
+    --panel: #f6f7f8;
+    --text: #0f1a1c;
+    --muted: #576f76;
+    --pill: #e5ebee;
+    --pill-hover: #d8e0e4;
+    --red: #d93900;
+    --line: #e5ebee;
+    --blue: #0045ac;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+/* ============ HEADER ============ */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 560px) 1fr;
+    align-items: center;
+    gap: 16px;
+    height: 56px;
+    padding: 0 16px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+}
+
+.logo img {
+    height: 36px;
+    width: auto;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 20px;
+    background: var(--pill);
+    color: var(--muted);
+}
+
+.search-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.searchbar span {
+    flex: 1;
+    text-align: center;
+    margin-right: 38px;
+    /* balances the icon so the text looks centered */
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.button_signin,
+.login {
+    height: 40px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.button_signin {
+    background: var(--pill);
+    color: var(--text);
+}
+
+.button_signin:hover {
+    background: var(--pill-hover);
+}
+
+.login {
+    background: var(--red);
+    color: #fff;
+}
+
+.login:hover {
+    background: #b83000;
+}
+
+.menubutton {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.menubutton:hover {
+    background: var(--pill);
+}
+
+/* ============ MAIN 3-COLUMN GRID ============ */
+.grid {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 640px) 316px;
+    gap: 24px;
+    justify-content: center;
+    padding: 16px;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/* ---- Column 1: login panel ---- */
+.login-panel {
+    position: sticky;
+    top: 72px;
+    align-self: start;
+    min-height: 560px;
+    padding: 24px 16px 200px;
+    border-radius: 16px;
+    text-align: center;
+    background-image: url("https://png.pngtree.com/background/20230410/original/pngtree-cartoon-cute-childrens-drawing-background-picture-image_2377497.jpg");
+    background-size:cover;
+}
+
+.login-panel h1 {
+    margin: 0 0 24px;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.oauth {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 8px;
+    padding: 0 14px;
+    border: 1px solid #ccd3d6;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.oauth:hover {
+    background: var(--panel);
+}
+
+.oauth img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.oauth span {
+    flex: 1;
+    margin-right: 20px;
+    /* keeps the text visually centered */
+}
+
+.terms {
+    margin: 16px 0 0;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--muted);
+}
+
+.terms a {
+    color: var(--blue);
+}
+
+/* ---- Column 2: feed ---- */
+.sortbar {
+    display: flex;
+    gap: 4px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 12px;
+}
+
+.sortbar button {
+    border: 0;
+    border-radius: 18px;
+    padding: 8px 12px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.sortbar button:hover {
+    background: var(--pill);
+}
+
+.post-card {
+    padding: 8px 12px 12px;
+    border-radius: 16px;
+    margin-bottom: 8px;
+}
+
+.post-card:hover {
+    background: #f6f7f8;
+}
+
+.post-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.avatar {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.sub {
+    font-weight: 700;
+    color: var(--text);
+}
+
+.sub:hover {
+    color: var(--blue);
+}
+
+.join {
+    margin-left: auto;
+    padding: 6px 14px;
+    border: 0;
+    border-radius: 16px;
+    background: #000;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dots {
+    border: 0;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    font-weight: 700;
+}
+
+.dots:hover {
+    background: var(--pill);
+}
+
+.post-title {
+    margin: 8px 0 10px;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.post-text {
+    margin: 0 0 10px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* Image with blurred side background and arrows */
+.media {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 500px;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 16px;
+    background: #cfd3d4;
+}
+
+.media::before {
+    content: "";
+    position: absolute;
+    inset: -30px;
+    background: var(--img) center / cover;
+    filter: blur(30px);
+    z-index: -1;
+}
+
+.media .post {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.arrow.prev {
+    left: 12px;
+}
+
+.arrow.next {
+    right: 12px;
+}
+
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.pill {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: var(--pill);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ---- Column 3: communities + footer ---- */
+.rightcol {
+    position: sticky;
+    top: 72px;
+    align-self: start;
+}
+
+.communities {
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--panel);
+}
+
+.communities h2 {
+    margin: 0 0 12px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.community {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 8px;
+}
+
+.community .avatar {
+    width: 32px;
+    height: 32px;
+}
+
+.community .info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.community .info span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.see-more {
+    display: inline-block;
+    margin: 8px 8px 0;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin-top: 32px;
+    padding: 0 4px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links p {
+    width: 100%;
+    margin: 8px 0 0;
+}
+
+/* ============ RESPONSIVE ============ */
+
+/* Tablet / small laptop: drop the right column */
+@media (max-width: 1100px) {
+    .grid {
+        grid-template-columns: 260px minmax(0, 1fr);
+    }
+
+    .rightcol {
+        display: none;
+    }
+}
+
+/* Large phone / small tablet: single column, hide login panel */
+@media (max-width: 760px) {
+    .grid {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 8px;
+    }
+
+    .login-panel {
+        display: none;
+    }
+
+    .topbar {
+        grid-template-columns: auto 1fr auto;
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .button_signin {
+        display: none;
+    }
+
+    .media {
+        height: 340px;
+        border-radius: 12px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .logo img {
+        height: 28px;
+    }
+
+    .searchbar span {
+        margin-right: 0;
+    }
+
+    .media {
+        height: 260px;
+    }
+
+    .post-title {
+        font-size: 16px;
+    }
+}
+
+/* ============ VIDEO POSTS ============ */
+.post-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 80vh;
+    border-radius: 16px;
+    background: #000;
+    object-fit: contain;
+}
+
+@media (max-width: 760px) {
+    .post-video {
+        border-radius: 12px;
+    }
+}

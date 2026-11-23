@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reddit Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="topbar">
+        <a class="logo" href="#">
+            <img src="https://logos-world.net/wp-content/uploads/2023/12/Reddit-Logo.png" alt="Reddit">
+        </a>
+
+        <div class="searchbar">
+            <img class="search-icon" src="https://i.pinimg.com/originals/7d/55/10/7d551083cc58985399bd5c4274969826.png" alt="">
+            <span>Search Reddit</span>
+        </div>
+
+        <div class="actions">
+            <button class="button_signin">Sign Up</button>
+            <button class="login">Log In</button>
+            <button class="menubutton" aria-label="More options">&middot;&middot;&middot;</button>
+        </div>
+    </header>
+
+    <!-- ================= 3-COLUMN GRID ================= -->
+    <main class="grid">
+
+        <!-- Column 1: login panel -->
+        <aside class="login-panel">
+            <h1>Join the most real<br>place on the internet</h1>
+
+            <a class="oauth" href="#">
+                <img src="https://toppng.com/uploads/preview/google-logo-transparent-png-11659866441wanynck5pd.png" alt="">
+                <span>Continue with Google</span>
+            </a>
+            <a class="oauth" href="#">
+                <img src="https://images.icon-icons.com/10519/PNG/512/542349_apple_vdfeba12cf996.png" alt="">
+                <span>Continue with Apple</span>
+            </a>
+            <a class="oauth" href="#">
+                <img src="https://as2.ftcdn.net/v2/jpg/01/29/94/01/1000_F_129940120_4MALfZZRuCYsiFi8KieMXDHusVXhJAzD.jpg" alt="">
+                <span>Continue with Phone Number</span>
+            </a>
+            <a class="oauth" href="#">
+                <img src="https://images.rawpixel.com/image_png_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA5L2pvYjEyMzItZWxlbWVudC0wMi1wXzEucG5n.png" alt="">
+                <span>Continue with Email</span>
+            </a>
+
+            <p class="terms">By continuing, you agree to our <a href="#">User Agreement</a> and acknowledge that you understand the <a href="#">Privacy Policy</a>.</p>
+        </aside>
+
+        <!-- Column 2: feed -->
+        <section class="feed">
+            <div class="sortbar">
+                <button>Best &#8964;</button>
+                <button>Everywhere &#8964;</button>
+                <button>&#9707; &#8964;</button>
+            </div>
+
+            <!-- Post 1: image post -->
+            <article class="post-card">
+                <div class="post-head">
+                    <span class="avatar" style="background:#7c4dff">T</span>
+                    <a class="sub" href="#">r/TechTalkIndia</a>
+                    <span class="discord" aria-hidden="true">&#127918;</span>
+                    <span class="time">&bull; 1 hr. ago</span>
+                    <button class="join">Join</button>
+                    <button class="dots" aria-label="More">&middot;&middot;&middot;</button>
+                </div>
+
+                <h2 class="post-title">The best AI models of 2026: which one do you use daily?</h2>
+
+                <div class="media" style="--img:url('https://cdn.designforonline.com/wp-content/uploads/2026/02/The-Best-AI-Models-of-2026-Februarys-Landmark-Releases-Ranked-2048x1152.jpg')">
+                    <img class="post" src="https://cdn.designforonline.com/wp-content/uploads/2026/02/The-Best-AI-Models-of-2026-Februarys-Landmark-Releases-Ranked-2048x1152.jpg" alt="Best AI models of 2026">
+                    <button class="arrow prev" aria-label="Previous image">&#8249;</button>
+                    <button class="arrow next" aria-label="Next image">&#8250;</button>
+                </div>
+
+                <div class="pills">
+                    <span class="pill">&#11014; 746 &#11015;</span>
+                    <span class="pill">&#128172; 145</span>
+                    <span class="pill">&#8599; Share</span>
+                </div>
+            </article>
+
+            <!-- Post 2: text post -->
+            <article class="post-card">
+                <div class="post-head">
+                    <span class="avatar" style="background:#2a9d8f">D</span>
+                    <a class="sub" href="#">r/datascience</a>
+                    <span class="time">&bull; 3 hr. ago</span>
+                    <button class="join">Join</button>
+                    <button class="dots" aria-label="More">&middot;&middot;&middot;</button>
+                </div>
+
+                <h2 class="post-title">Power BI or Tableau for a fresher&rsquo;s portfolio?</h2>
+                <p class="post-text">I&rsquo;m building my first dashboards and can&rsquo;t decide which tool to learn deeply. What are you seeing in job posts?</p>
+
+                <div class="pills">
+                    <span class="pill">&#11014; 978 &#11015;</span>
+                    <span class="pill">&#128172; 143</span>
+                    <span class="pill">&#8599; Share</span>
+                </div>
+            </article>
+
+            <!-- Video post -->
+            <article class="post-card">
+                <div class="post-head">
+                    <span class="avatar" style="background:#e4577b">A</span>
+                    <a class="sub" href="#">r/animation</a>
+                    <span class="time">&bull; 5 hr. ago</span>
+                    <button class="join">Join</button>
+                    <button class="dots" aria-label="More">&middot;&middot;&middot;</button>
+                </div>
+
+                <h2 class="post-title">Big Buck Bunny still holds up after all these years</h2>
+
+                <video class="post-video" controls preload="metadata" playsinline>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="pills">
+                    <span class="pill">&#11014; 2.1k &#11015;</span>
+                    <span class="pill">&#128172; 312</span>
+                    <span class="pill">&#8599; Share</span>
+                </div>
+            </article>
+
+            <!-- Video post -->
+            <article class="post-card">
+                <div class="post-head">
+                    <span class="avatar" style="background:#2a9d8f">N</span>
+                    <a class="sub" href="#">r/nature</a>
+                    <span class="time">&bull; 8 hr. ago</span>
+                    <button class="join">Join</button>
+                    <button class="dots" aria-label="More">&middot;&middot;&middot;</button>
+                </div>
+
+                <h2 class="post-title">Time-lapse of a flower blooming</h2>
+
+                <video class="post-video" controls preload="metadata" playsinline>
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="pills">
+                    <span class="pill">&#11014; 1.4k &#11015;</span>
+                    <span class="pill">&#128172; 96</span>
+                    <span class="pill">&#8599; Share</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- Column 3: popular communities + footer links -->
+        <aside class="rightcol">
+            <div class="communities">
+                <h2>Popular communities</h2>
+
+                <div class="community">
+                    <span class="avatar" style="background:#1d2b3a">D</span>
+                    <div class="info">r/DestinyTheGame<span>3,382,236 members</span></div>
+                </div>
+                <div class="community">
+                    <span class="avatar" style="background:#e4577b">A</span>
+                    <div class="info">r/anime<span>14,505,184 members</span></div>
+                </div>
+                <div class="community">
+                    <span class="avatar" style="background:#5c4a3a">D</span>
+                    <div class="info">r/destiny2<span>975,862 members</span></div>
+                </div>
+                <div class="community">
+                    <span class="avatar" style="background:#7c4dff">F</span>
+                    <div class="info">r/FortniteBR<span>5,735,045 members</span></div>
+                </div>
+                <div class="community">
+                    <span class="avatar" style="background:#222">D</span>
+                    <div class="info">r/dndnext<span>832,439 members</span></div>
+                </div>
+
+                <a class="see-more" href="#">See more</a>
+            </div>
+
+            <footer class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Popular</a>
+                <a href="#">News</a>
+                <a href="#">Explore</a>
+                <a href="#">Best of Reddit</a>
+                <a href="#">Best of Reddit in Portuguese</a>
+                <a href="#">Best of Reddit in German</a>
+                <a href="#">Reddit Rules</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">User Agreement</a>
+                <a href="#">Accessibility</a>
+                <p>Reddit, Inc. &copy; 2026. All rights reserved.</p>
+            </footer>
+        </aside>
+
+    </main>
+</body>
+
+</html>
